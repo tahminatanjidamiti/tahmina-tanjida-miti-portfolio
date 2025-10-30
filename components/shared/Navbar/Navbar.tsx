@@ -18,7 +18,7 @@ const Navbar = () => {
           <Link href="/" className="shrink-0">
             <Logo />
           </Link>
-          <h1 className="hidden md:block font-semibold"><i>TAHMINA TANJIDA MITI</i></h1>
+          <h1 className="hidden md:block font-semibold text-transparent bg-clip-text bg-linear-to-r from-gray-700 from-5% via-amber-500 to-gray-700"><i>TAHMINA TANJIDA MITI</i></h1>
         </div>
 
         {/* Desktop Menu */}
@@ -26,8 +26,10 @@ const Navbar = () => {
 
         {/* Actions and Menus */}
         <div className="flex items-center gap-4 md:gap-6">
-          {/* ModeToggle Button */}
-          <ModeToggle />
+          <div className="border-4 border-yellow-700 rounded-full">
+            {/* ModeToggle Button */}
+            <ModeToggle />
+          </div>
 
           {/* Mobile Menu */}
           <div className="md:hidden">
@@ -38,7 +40,7 @@ const Navbar = () => {
           <Sheet>
             <SheetTrigger>
               <CircleEllipsis
-                className="w-8 h-8 text-foreground cursor-pointer hover:text-primary transition-colors"
+                className="border-2 border-yellow-700  rounded-full w-10 h-10 text-yellow-800 cursor-pointer hover:text-primary transition-colors"
                 strokeWidth={1.8}
               />
             </SheetTrigger>
