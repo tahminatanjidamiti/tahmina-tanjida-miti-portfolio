@@ -4,9 +4,9 @@ import { Logo } from "./Navbar/logo";
 export default function Footer() {
 
   return (
-    <footer className="border-t">
+    <footer className="border-t dark:border-slate-700/70">
       <div className="container mx-auto py-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
           <div><div className="flex justify-start items-center gap-2">
             {/* Logo */}
