@@ -19,7 +19,7 @@ export default async function Hero() {
           height={300}
           src="https://i.ibb.co.com/xqgY5DnL/tahmina-tanjida-miti-image.png"
           alt="Tahmina Tanjida Miti Image!"
-        />
+          loading="eager" priority />
         <h1 className="my-2 text-3xl font-bold text-transparent bg-clip-text bg-linear-to-r from-yellow-800 from-45% via-amber-500 to-65% to-yellow-900">Web Developer</h1>
         <p className="mb-2">
           Full-Stack Web Developer skilled in MERN, Next.js, and TypeScript.
