@@ -1,7 +1,7 @@
 # 👩‍💻 Tahmina Tanjida Miti — Portfolio
 
 A modern, fast, and fully responsive portfolio website built with **Next.js**, **TypeScript**, **Tailwind CSS**, and **ShadcnUI**.  
-This portfolio showcases blogs, projects, skills, and provides an interactive way for users to explore your professional work.
+This portfolio showcases blogs, projects, skills, and provides an interactive way to explore for users. 
 
 # 🌐 Live Link
 [https://tahmina-tanjida-miti-portfolio.vercel.app/](https://tahmina-tanjida-miti-portfolio.vercel.app/)
@@ -14,7 +14,9 @@ This portfolio showcases blogs, projects, skills, and provides an interactive wa
 - 🎯 Role-Based Route Protection with Next.js middleware
 
 ### ✨ Modern UI & Professional Design
+- SEO Friendly
 - Resume support
+- React Quill for rich text editor
 - Responsive for **mobile**, **tablet**, and **desktop**
 - Smooth interective experience
 
@@ -29,6 +31,7 @@ This portfolio showcases blogs, projects, skills, and provides an interactive wa
 - **TypeScript**
 - **Tailwind CSS + ShadcnUI**
 - **React Hook Form + Zod** for validation
+- **React Quill** for rich text editor
 - **Sonner** for toast notifications
 - **Next Cloudinary** Upload/View thumbnail (stored on Cloudinary)
 - **Emailjs** Send Email for contact form (using emailjs)
