@@ -11,7 +11,7 @@ export default withAuth(
 
     // Allow only ADMIN to access dashboard
     if (role !== "ADMIN") {
-      return NextResponse.redirect(new URL("/unauthorized", req.url));
+      return NextResponse.redirect(new URL("/", req.url));
     }
 
     return NextResponse.next();

@@ -20,7 +20,7 @@ const Navbar = () => {
           <Link href="/" className="shrink-0">
             <Logo />
           </Link>
-          <h1 className="hidden md:block font-semibold text-transparent bg-clip-text bg-linear-to-r from-gray-700 from-5% via-amber-500 to-gray-700"><i>TAHMINA TANJIDA MITI</i></h1>
+          <h1 className="hidden md:block font-semibold text-transparent bg-clip-text bg-linear-to-r from-gray-700 from-5% via-amber-500 to-gray-700 pr-1"><i>TAHMINA TANJIDA MITI</i></h1>
         </div>
 
         {/* Desktop Menu */}

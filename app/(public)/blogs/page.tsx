@@ -1,6 +1,6 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import BlogCard from "@/components/modules/Blogs/BlogCard";
 import { getAllBlogs } from "@/services/PostServices";
+import { Post } from "@/types";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,9 +15,9 @@ export default async function AllBlogsPage() {
   // console.log(blogs)
   return (
     <div>
-      <h2 className="text-center my-5 text-4xl">All Blogs</h2>
-      <div className="grid grid-cols-3 gap-4 max-w-6xl mx-auto my-5">
-        {blogs.map((blog: any) => (<BlogCard key={blog?.id} post={blog} />))}
+      <h2 className="pt-6 text-center my-5 text-4xl">All Blogs</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto my-5 items-stretch">
+        {blogs.map((blog: Post) => (<BlogCard key={blog?.id} post={blog} />))}
       </div>
     </div>
   );

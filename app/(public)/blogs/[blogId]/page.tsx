@@ -1,13 +1,13 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import BlogDetailsCard from "@/components/modules/Blogs/BlogDetailsCard";
 import { getBlogById } from "@/services/PostServices";
-import React from "react";
+import { Post } from "@/types";
+
 
 export const generateStaticParams = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/post`);
   const { data: blogs } = await res.json();
 
-  return blogs.slice(0, 9).map((blog: any) => ({
+  return blogs.slice(0, 9).map((blog: Post) => ({
     blogId: String(blog.id),
   }));
 };

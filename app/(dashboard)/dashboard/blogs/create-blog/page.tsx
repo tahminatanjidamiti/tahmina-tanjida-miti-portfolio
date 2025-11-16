@@ -1,11 +1,19 @@
-import CreateBlogFrom from "@/components/modules/Blogs/CreateBlogForm";
+import BlogForm from "@/components/modules/Admin/BlogForm";
+import { createBlog } from "@/actions/blogs";
 
-const CreateBlog = () => {
+export default function CreateBlogPage() {
+  const handleCreate = async (formData: FormData) => {
+    "use server";
+    await createBlog(formData);
+  };
+
   return (
-    <div className="w-full flex justify-center items-center">
-      <CreateBlogFrom/>
+    <div className="p-6">
+      <BlogForm
+        action={handleCreate}
+        title="Create New Blog"
+        buttonLabel="Create Blog"
+      />
     </div>
   );
-};
-
-export default CreateBlog;
+}

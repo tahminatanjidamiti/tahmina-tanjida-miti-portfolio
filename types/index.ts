@@ -35,11 +35,11 @@ export interface Project {
   id: number;
   title: string;
   thumbnail?: string | null;
-  projectLinks: string[];
   liveSite?: string | null;
+  clientSite?: string | null;
+  serverSite?: string | null;
   description: string;
   features: string[];
-  techStack: string[];
   views: number;
   isFeatured: boolean;
   authorId: number;

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Home, LogOut, BookCheck, Users, ProjectorIcon } from "lucide-react";
+import { Home, LogOut, BookCheck, Users, ProjectorIcon, ChartBar } from "lucide-react";
 import { signOut, useSession } from "next-auth/react";
 
 export default function Sidebar() {
@@ -39,6 +39,13 @@ export default function Sidebar() {
         >
           <Users className="h-4 w-4" />
            Users
+        </Link>
+        <Link
+          href="/dashboard/charts"
+          className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium hover:bg-yellow-200 hover:text-black"
+        >
+          <ChartBar className="h-4 w-4" />
+           Charts
         </Link>
       </nav>
 

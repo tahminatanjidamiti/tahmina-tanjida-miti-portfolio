@@ -11,14 +11,14 @@ export default async function FeaturedPosts() {
     return (
         <div>
             <h2 className="text-center my-10 text-4xl">Featured Blogs</h2>
-            <div className="grid grid-cols-3 gap-4 max-w-6xl mx-auto my-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto my-5 items-stretch">
                 {blogs.slice(0, 3).map((blog: Post) => (<BlogCard key={blog?.id} post={blog} />))}
             </div>
             {/* CTA */}
           <div className="my-5 flex flex-col items-center justify-center sm:flex-row gap-4">
             <Link
               href="/blogs"
-              className="inline-flex items-center justify-center px-8 py-4 font-medium rounded-xl border border-amber-500 bg-linear-to-r from-gray-700 from-5% via-amber-500 to-gray-700 transition"
+              className="inline-flex items-center justify-center px-8 py-4 font-medium rounded-xl border border-amber-500 bg-linear-to-r from-gray-700 from-5% via-amber-500 to-gray-700 hover:text-white dark:hover:text-black transition"
             >
               Explore Blogs
             </Link>

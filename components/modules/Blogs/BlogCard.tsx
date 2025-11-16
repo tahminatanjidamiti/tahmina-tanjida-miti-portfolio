@@ -1,39 +1,42 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import Link from "next/link";
 import Image from "next/image";
+import { Post } from "@/types";
 
-export default function BlogCard({ post }: { post: any }) {
+export default function BlogCard({ post }: { post: Post }) {
   return (
     <Link
       href={`/blogs/${post.id}`}
-      className="block group transform hover:-translate-y-1 transition-transform duration-300"
+      className="block group transform hover:-translate-y-1 transition-transform duration-300 h-full"
     >
-      <div className="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+      <div className="bg-linear-to-l from-gray-600 from-5% via-grey-400 to-gray-800 dark:bg-linear-to-l dark:from-gray-800 dark:from-5% dark:via-gray-950 dark:to-gray-800 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 h-full flex flex-col border border-slate-700/70">
         {post.thumbnail ? (
           <div className="relative h-56 w-full overflow-hidden">
             <Image
               src={post.thumbnail}
               alt={post.title}
               fill
-              className="object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="eager"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="object-fill group-hover:scale-105 transition-transform duration-300"
             />
           </div>
         ) : (
-          <div className="h-56 w-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-500 dark:text-gray-300">
+          <div className="h-56 w-full flex items-center justify-center">
             No Image
           </div>
         )}
 
-        <div className="p-6">
-          <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors">
+        <div className="p-6 flex flex-col grow">
+          <h3 className="text-xl font-bold mb-2 dark:group-hover:text-black  group-hover:text-white transition-colors">
             {post.title}
           </h3>
 
-          <p className="text-gray-700 dark:text-gray-300 mb-4 line-clamp-3">
-            {post.content}
-          </p>
+          <div
+            className="mb-4 line-clamp-3"
+            dangerouslySetInnerHTML={{ __html: post.content }}
+          />
 
-          <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center justify-between mb-4 mt-auto">
             <div className="flex items-center gap-2">
               <Image
                 src={
@@ -45,7 +48,7 @@ export default function BlogCard({ post }: { post: any }) {
                 height={36}
                 className="rounded-full border-2 border-gray-200 dark:border-gray-700"
               />
-              <span className="text-gray-600 dark:text-gray-300 text-sm flex items-center gap-1">
+              <span className="text-sm flex items-center gap-1">
                 {post.author.name}
                 {post.author.isVerified && (
                   <svg
@@ -65,13 +68,13 @@ export default function BlogCard({ post }: { post: any }) {
                 )}
               </span>
             </div>
-            <span className="text-gray-500 dark:text-gray-400 text-sm">
+            <span className="text-gray-200 dark:text-gray-400 text-sm">
               {post.views} views
             </span>
           </div>
 
           <div className="text-right">
-            <span className="text-blue-600 dark:text-blue-400 font-semibold text-sm hover:underline">
+            <span className="text-amber-500 hover:underline">
               Read More →
             </span>
           </div>
