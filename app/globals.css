@@ -1,6 +1,12 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+.active {
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid goldenrod;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
